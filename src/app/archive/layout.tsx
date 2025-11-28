@@ -36,10 +36,13 @@ export default function ArchiveLayout({
         {archive}
         </section>
         <br/>
+        <div style={{backgroundColor: 'black', width:'100%', height: 1}}/>
         <br/>
         <section>
         {latest}
         </section>
+        <br/>
+        <div style={{backgroundColor: 'black', width:'100%', height: 1}}/>
         <br/>
         <Link href={"/"}>{"<- back"}</Link>
       </main>
