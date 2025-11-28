@@ -1,18 +1,26 @@
+import { getNews } from "@/_data/fetchNews";
 import styles from "../page.module.css";
 import Link from "next/link";
+import { Fragment } from "react/jsx-runtime";
 
-export default function NewsPage() {
+
+export default async function NewsPage() {
+
+    const newsData = await getNews();
+
+    console.log(newsData);
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>News Page</h1>
         <br />
-        <Link href={"/news/1"}>News Article 1</Link>
-        <br />
-        <Link href={"/news/2"}>News Article 2</Link>
-        <br />
-        <Link href={"/news/3"}>News Article 3</Link>
-        <br />
+        {newsData.map((article:any, index:number)=>(
+            <Fragment key={index}>
+                <Link href={`/news/${article.slug}`}>{article.title}</Link>
+                <br />
+            </Fragment>
+        ))}
         <Link href={"/"}>{"<- back"}</Link>
       </main>
     </div>
