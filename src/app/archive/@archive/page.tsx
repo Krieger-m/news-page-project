@@ -4,9 +4,12 @@ import Link from "next/link";
 export default function ArchivePage() {
   return (
     <div>
-        <h1>Archive Page</h1>
+        <h2>Archive Page</h2>
+        <br />
+        <p>News archive will be dispayed here</p>
         <br />
         <Link href={"/"}>{"<- back"}</Link>
+        <br />
     </div>
   );
 }
