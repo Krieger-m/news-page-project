@@ -1,9 +1,10 @@
 "use server";
 
+import { notFound } from "next/navigation";
 import qs from "qs";
 
 export async function getNews(id?: string | null) {
-    
+
   const newsQuery = qs.stringify({
     filters: {
       slug: {
@@ -21,6 +22,8 @@ export async function getNews(id?: string | null) {
 
   // console.log(await resJson.data);
   const data = await resJson.data;
+
+  if (!data[0]) return notFound();
 
   return data;
 }
