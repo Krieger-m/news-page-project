@@ -23,7 +23,6 @@ export async function getNews(id?: string | null) {
   // console.log(await resJson.data);
   const data = await resJson.data;
 
-  if (!data[0]) return notFound();
+    return (!data[0]) ? notFound() : data;
 
-  return data;
 }
