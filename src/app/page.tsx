@@ -8,6 +8,8 @@ export default function HomePage() {
         <h1>Landing Page</h1>
         <br/>
         <Link href={'/news'}>News Page</Link>
+        <br/>
+        <Link href={'/archive'}>Archive Page</Link>
       </main>
     </div>
   );

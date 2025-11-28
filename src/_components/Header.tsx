@@ -8,6 +8,8 @@ export function Header (){
                 <Link href={'/'}>Home</Link>
                 <span> | </span>
                 <Link href={'/news'}>News</Link>
+                <span> | </span>
+                <Link href={'/archive'}>Archive</Link>
             </div>
         </>
     )
