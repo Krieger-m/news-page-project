@@ -8,7 +8,7 @@ export default async function NewsPage() {
 
     const newsData = await getNews();
 
-    console.log(newsData);
+    // console.log(newsData);
 
   return (
     <div className={styles.page}>

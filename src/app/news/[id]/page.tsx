@@ -11,14 +11,11 @@ interface NewsIdPageProps {
 
 export default async function NewsIdPage({ params }: NewsIdPageProps) {
 
-    const id = (await params).id;
+  const id = (await params).id;
 
   const res = await getNews(await id);
 
   const newsData = res[0];
-
-  console.log(id)
-  console.log(newsData)
 
   return (
     <div className={styles.page}>
@@ -29,14 +26,15 @@ export default async function NewsIdPage({ params }: NewsIdPageProps) {
         <time dateTime={newsData.date}>{newsData.date}</time>
         <br />
         <Image
-            src={`http://localhost:1337${newsData.image.url}`}
-            alt={newsData.image.alternativeText}
-            width={newsData.image.formats.small.width}
-            height={newsData.image.formats.small.height}
+          src={`http://localhost:1337${newsData.image.url}`}
+          alt={newsData.image.alternativeText}
+          width={newsData.image.formats.small.width}
+          height={newsData.image.formats.small.height}
+          loading="eager"
         />
         <br />
         <div>
-        <p>{newsData.content}</p>
+          <p>{newsData.content}</p>
         </div>
         <br />
         <Link href={"/news"}>{"<- back"}</Link>

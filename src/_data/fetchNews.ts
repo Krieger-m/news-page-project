@@ -3,8 +3,8 @@
 import qs from "qs";
 
 export async function getNews(id?: string | null) {
+    
   const newsQuery = qs.stringify({
-
     filters: {
       slug: {
         $eq: id,
@@ -17,8 +17,6 @@ export async function getNews(id?: string | null) {
     `http://localhost:1337/api/news-collections?${newsQuery}`
   );
 
-  console.log(`http://localhost:1337/api/news-collections?${newsQuery}`)
-  
   const resJson = await res.json();
 
   // console.log(await resJson.data);
