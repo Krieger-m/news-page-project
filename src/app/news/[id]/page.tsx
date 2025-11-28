@@ -26,6 +26,7 @@ export default async function NewsIdPage({ params }: NewsIdPageProps) {
         <h1>{newsData.title}</h1>
         <br />
         <p>News article ID: {newsData.newsId}</p>
+        <time dateTime={newsData.date}>{newsData.date}</time>
         <br />
         <Image
             src={`http://localhost:1337${newsData.image.url}`}
