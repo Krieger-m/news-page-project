@@ -6,12 +6,14 @@ export default function NewsPage() {
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>News Page</h1>
-        <br/>
-        <Link href={'/news/1'}>News Article 1</Link>
-        <br/>
-        <Link href={'/news/2'}>News Article 2</Link>
-        <br/>
-        <Link href={'/news/3'}>News Article 3</Link>
+        <br />
+        <Link href={"/news/1"}>News Article 1</Link>
+        <br />
+        <Link href={"/news/2"}>News Article 2</Link>
+        <br />
+        <Link href={"/news/3"}>News Article 3</Link>
+        <br />
+        <Link href={"/"}>{"<- back"}</Link>
       </main>
     </div>
   );
