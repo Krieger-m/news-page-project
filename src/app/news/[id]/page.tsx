@@ -26,7 +26,7 @@ export default async function NewsIdPage({ params }: NewsIdPageProps) {
         <time dateTime={newsData.date}>{newsData.date}</time>
         <br />
         <Image
-          src={`http://localhost:1337${newsData.image.url}`}
+          src={`https://cms.frontend-testpage.org${newsData.image.url}`}
           alt={newsData.image.alternativeText}
           width={newsData.image.formats.small.width}
           height={newsData.image.formats.small.height}

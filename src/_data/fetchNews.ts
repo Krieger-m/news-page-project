@@ -15,7 +15,7 @@ export async function getNews(id?: string | null) {
   });
 
   const res = await fetch(
-    `http://localhost:1337/api/news-collections?${newsQuery}`
+    `https://cms.frontend-testpage.org/api/news-collections?${newsQuery}`
   );
 
   const resJson = await res.json();
